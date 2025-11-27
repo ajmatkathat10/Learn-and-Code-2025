@@ -1,0 +1,1 @@
+This repo contains tasks assigned during the Learn and Code sessions.
