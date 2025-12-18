@@ -1,0 +1,25 @@
+{
+  "name": "learn-and-code",
+  "version": "1.0.0",
+  "description": "This repo contains tasks assigned during the Learn and Code sessions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajmatkathat10/Learn-and-Code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajmatkathat10/Learn-and-Code/issues"
+  },
+  "homepage": "https://github.com/ajmatkathat10/Learn-and-Code#readme",
+  "devDependencies": {
+    "@types/node": "^25.0.2",
+    "npm": "^11.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
