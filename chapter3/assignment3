@@ -1,0 +1,61 @@
+class Customer {
+  customerID: string;
+  companyName: string;
+  contactName: string;
+  country: string;
+
+  constructor(customerID: string, companyName: string, contactName: string, country: string) {
+    this.customerID = customerID;
+    this.companyName = companyName;
+    this.contactName = contactName;
+    this.country = country;
+  }
+}
+
+class CustomerDB {
+  private db: { customers: Customer[] };
+
+  constructor(customers: Customer[]) {
+    this.db = { customers };
+  }
+
+  getCustomers(): Customer[] {
+    return this.db.customers;
+  }
+}
+
+class CustomerSearchService {
+  private db: CustomerDB;
+
+  constructor(db: CustomerDB) {
+    this.db = db;
+  }
+
+  searchByCountry(country: string): Customer[] {
+    const customers = this.db.getCustomers();
+    // logic
+    return customers
+  }
+
+  searchByCompanyName(company: string): Customer[] {
+    const customers = this.db.getCustomers();
+    // logic
+    return customers
+  }
+
+  searchByContact(contact: string): Customer[] {
+    const customers = this.db.getCustomers();
+    // logic
+    return customers
+  }
+}
+
+class CustomerExportService {
+  exportToCSV(data: Customer[]): string {
+    let result = '';
+    
+    // logic..
+
+    return result;
+  }
+}
