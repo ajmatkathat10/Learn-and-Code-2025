@@ -1,6 +1,6 @@
 import random
 
-def rollDice(totalSides):
+def roll_dice(totalSides):
     currentRollValue = random.randint(1, totalSides)
     return currentRollValue
 

@@ -1,6 +1,6 @@
 import random
 
-def isValidGuess(userGuessValue):
+def is_valid_guess(userGuessValue):
     if userGuessValue.isdigit() and 1 <= int(userGuessValue) <= 100:
         return True
     else:
@@ -14,7 +14,7 @@ def main():
     totalGuessCount = 0
 
     while not isGuessedCorrectly:
-        if not isValidGuess(userGuessValue):
+        if not is_valid_guess(userGuessValue):
             userGuessValue = input("I wont count this one Please enter a number between 1 to 100")
             continue
         else:

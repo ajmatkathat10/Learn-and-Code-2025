@@ -9,28 +9,28 @@ function getFullCountryName(countryCode: string): void {
 }
 
 function main(): void {
-    const readLine = readline.createInterface({
+    const readLineInterface = readline.createInterface({
         input: process.stdin,
         output: process.stdout
     });
   
-    function takeUserChoice(): void {
-        readLine.question('Enter a country code like IN, US to get full country name or "quit" to quit: ', (input) => {
+    function promptUserForCountryCode(): void {
+        readLineInterface.question('Enter a country code like IN, US to get full country name or "quit" to quit: ', (input) => {
             const trimmedUserInput = input.trim();
             if (trimmedUserInput.toLowerCase() === 'quit') {
                 console.log('Game Over\n');
-                readLine.close();
+                readLineInterface.close();
                 return;
             }
             
             if (trimmedUserInput) getFullCountryName(trimmedUserInput);
             else console.log('Please enter valid country code!')
             console.log('');
-            takeUserChoice();
+            promptUserForCountryCode();
         });
     }
   
-    takeUserChoice();
+    promptUserForCountryCode();
 }
 
 main();
