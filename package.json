@@ -4,7 +4,8 @@
   "description": "This repo contains tasks assigned during the Learn and Code sessions.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:chapter8": "ts-node chapter8/index.ts"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,13 @@
   },
   "homepage": "https://github.com/ajmatkathat10/Learn-and-Code#readme",
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^25.0.2",
     "npm": "^11.7.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
   }
 }
