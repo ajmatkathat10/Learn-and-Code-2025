@@ -1,6 +1,11 @@
 public class Paperboy {
     public void collectPayment(Customer customer, double paymentAmount) {
-        customer.getPayment(paymentAmount);
+        boolean paymentStatus = customer.getPayment(paymentAmount);
+        if (paymentStatus) {
+            System.out.println("Payment collected successfully");
+        } else {
+            System.out.println("Payment not collected");
+        }
     }
 }
 
@@ -17,7 +22,7 @@ public class Customer {
         return lastName; 
     }
     
-    public void getPayment(double amount) {
+    public Boolean getPayment(double amount) {
         if (myWallet.getTotalMoney() > amount) {
             myWallet.subtractMoney(amount);
             return true;
